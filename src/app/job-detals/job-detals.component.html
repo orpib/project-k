@@ -1,0 +1,21 @@
+<form [formGroup]="jobDeatilsFormGroup">
+
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap='32px'>
+        <mat-form-field class="example-full-width">
+            <mat-label> Job description</mat-label>
+            <textarea matInput #description maxlength="1000" placeholder="Ex. Looking for talented software enginners"
+                formControlName="description"></textarea>
+            <mat-hint align="start"><strong>Please provide job description</strong> </mat-hint>
+            <mat-hint align="end">{{description.value.length}} / 1000</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Must have</mat-label>
+            <input matInput #mustHave maxlength="256" placeholder="Ex. Software engineer, Database admin"
+                formControlName="keyowrds">
+            <mat-hint align="start"><strong>Please provide comma spepareted keyowrds</strong> </mat-hint>
+            <mat-hint align="end">{{mustHave.value.length}} / 256</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Save</button>
+    </div>
+</form>
