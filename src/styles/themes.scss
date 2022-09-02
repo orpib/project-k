@@ -1,6 +1,105 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
+
+$mat-annanow-primary: (
+    50 : #fae0eb,
+    100 : #f2b3ce,
+    200 : #e980ad,
+    300 : #e04d8c,
+    400 : #d92673,
+    500 : #d2005a,
+    600 : #cd0052,
+    700 : #c70048,
+    800 : #c1003f,
+    900 : #b6002e,
+    A100 : #ffdfe4,
+    A200 : #ffacbb,
+    A400 : #ff7991,
+    A700 : #ff5f7c,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    ),
+);
+$mat-annanow-accent: (
+    50: #ffffff,
+    100: #fafafa,
+    200: #f5f5f5,
+    300: #f0f0f0,
+    400: #dedede,
+    500: #c2c2c2,
+    600: #979797,
+    700: #818181,
+    800: #606060,
+    900: #3c3c3c,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #000000,
+        700: #000000,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000,
+    ),
+);
+
+$mat-annanow-warn: (
+    50: #f6e0e4,
+    100: #e7b3bc,
+    200: #d88090,
+    300: #c84d63,
+    400: #bc2641,
+    500: #b00020,
+    600: #a9001c,
+    700: #a00018,
+    800: #970013,
+    900: #87000b,
+    A100: #ffb3b6,
+    A200: #ff8085,
+    A400: #ff4d53,
+    A700: #ff343b,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #ffffff,
+    ),
+);
+
 $primary: (50 : #e5faf6,
     100 : #bdf2e9,
     200 : #92e9da,
@@ -91,9 +190,44 @@ $warn: (50 : #ffeaea,
         A700 : #000000,
     ));
 
-$primary: mat-palette($primary, 700, 800, 900);
-$accent: mat-palette($accent, A200, A100, A400);
-$warn: mat-palette($warn);
+$custom-primary : (
+    50: #e3fae0,
+  100: #b9f2b3,
+  200: #8be980,
+  300: #5ce04d,
+  400: #39d926,
+  500: #16d200,
+  600: #13cd00,
+  700: #10c700,
+  800: #0cc100,
+  900: #06b600,
+  A100: #dfffdf,
+  A200: #acffac,
+  A400: #7aff79,
+  A700: #60ff5f,
+  contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+    
+);
+
+
+
+$primary: mat-palette($custom-primary, 700, 800, 900);
+$accent: mat-palette($mat-annanow-accent, A200, A100, A400);
+$warn: mat-palette($mat-annanow-warn);
 
 
 $theme: mat-light-theme($primary, $accent, $warn);

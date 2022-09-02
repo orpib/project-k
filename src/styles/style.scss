@@ -7,61 +7,16 @@
 @import "./colors.scss";
 @import "./angulary-font.scss";
 
-// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-$custom-typography: mat-typography-config($font-family: '"Muli", sans-serif;');
-@include mat-core($custom-typography);
+
+@import '../fonts/Poppins/stylesheet.css';
+
+$app-typography: mat-typography-config(
+	$font-family: '"Poppins", Arial, sans-serif',
+);
+@include mat-core($app-typography);
 
 * {
-    font-family: 'Muli', sans-serif;
-}
-
-@font-face {
-    font-family: 'open_sans-italic';
-    src: url('../assets/fonts/open-sans/opensans-italic-webfont.woff2') format('woff2'),
-        url('../assets/fonts/open-sans/opensans-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sans-light';
-    src: url('../assets/fonts/open-sans/opensans-light-webfont.woff2') format('woff2'),
-        url('../assets/fonts/open-sans/opensans-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sans-light_italic';
-    src: url('../assets/fonts/open-sans/opensans-lightitalic-webfont.woff2') format('woff2'),
-        url('../assets/fonts/open-sans/opensans-lightitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sans-regular';
-    src: url('../assets/fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
-        url('../assets/fonts/open-sans/opensans-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sans-semibold';
-    src: url('../assets/fonts/open-sans/opensans-semibold-webfont.woff2') format('woff2'),
-        url('../assets/fonts/open-sans/opensans-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sans-semibold_italic';
-    src: url('../assets/fonts/open-sans/opensans-semibolditalic-webfont.woff2') format('woff2'),
-        url('../assets/fonts/open-sans/opensans-semibolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Poppins';
 }
 
 // Main style start
