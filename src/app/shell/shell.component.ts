@@ -33,14 +33,14 @@ export class ShellComponent implements OnInit {
           ))
       )
     );
-    debugger;
+
     // this.activatedRoute.data.subscribe((data) => {
     //   this.isLoading = false;
     //   debugger;
     // });
 
     this.router.events.subscribe((data) => {
-      debugger;
+
       if (data instanceof RoutesRecognized) {
         this.isPrivatePage = data.state.root.firstChild.data.isPrivate;
         //console.log(data.state.root.firstChild.data);

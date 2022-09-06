@@ -1,0 +1,13 @@
+<button mat-button (click)="prepareScript()" color="primary">PrepareScript</button>
+<div fxLayout="column" fxLayoutGap="32px">
+   <section *ngFor="let b of branchNames" fxLayout="row" fxLayoutGap="24px">
+    <mat-checkbox (change)="storeBranchNames($event ,b)" color="primary">
+        <span class="font-size-20">{{b}}</span>
+    </mat-checkbox>
+    
+   </section>
+
+   <div class="mt-40" fxLayout="column" [innerHTML]="script">
+
+   </div>
+</div>
